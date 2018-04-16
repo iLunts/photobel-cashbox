@@ -1,13 +1,59 @@
-// ------------------------------------------------------
+// ------------------------------------
 // Block '.cashbox'
-// ------------------------------------------------------
-.cashbox{
+// ------------------------------------
+.cashbox {
     position: fixed;
     display: block;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     width: 100%;
     top: 0;
     left: 0;
     right: 0;
-    height: 30px;
-    background-color: orange;
+    // height: 30px;
+    background-color: #fadf76;
+    box-shadow: 0 1px 0 0 #d2c079;
+    color: #2b2b2b;
+    font-size: 13px;
+    padding: 5px 10px 5px 0;
+    transition: all .3s;
+
+    &:hover{
+        background-color: #ffefa6;
+    }
+
+    & &__logo{
+        display: inline-block;
+        vertical-align: middle;
+        height: 28px;
+    }
+
+    & &__title{
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 300;
+        vertical-align: middle;
+        margin: 0 20px;
+    }
+
+    & &__btn{
+        position: relative;
+        background-color: #fff;
+        color: #222;
+        padding: 0 20px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        font-size: 12px;
+        line-height: 22px;
+        border-radius: 3px;
+        outline: none;
+        box-shadow: none;
+        cursor: pointer;
+
+        &:before{
+            content: '';
+        }
+    }
 }
