@@ -18,7 +18,7 @@
     box-shadow: 0 1px 0 0 #d2c079;
     color: #2b2b2b;
     font-size: 13px;
-    padding: 5px 10px 5px 0;
+    padding: 5px 10px 5px 3px;
     transition: all .3s;
 
     &:hover{
@@ -54,6 +54,95 @@
 
         &:before{
             content: '';
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjkgMTI5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjkgMTI5IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgogIDxnPgogICAgPHBhdGggZD0ibTEyMS4zLDM0LjZjLTEuNi0xLjYtNC4yLTEuNi01LjgsMGwtNTEsNTEuMS01MS4xLTUxLjFjLTEuNi0xLjYtNC4yLTEuNi01LjgsMC0xLjYsMS42LTEuNiw0LjIgMCw1LjhsNTMuOSw1My45YzAuOCwwLjggMS44LDEuMiAyLjksMS4yIDEsMCAyLjEtMC40IDIuOS0xLjJsNTMuOS01My45YzEuNy0xLjYgMS43LTQuMiAwLjEtNS44eiIgZmlsbD0iIzAwMDAwMCIvPgogIDwvZz4KPC9zdmc+Cg==);
+        }  
+    }
+}
+
+
+// ------------------------------------
+// Block '.cashbox-cart'
+// ------------------------------------
+.cashbox-cart{
+    position: absolute;
+    right: 10px;
+    padding: 10px 0;
+    top: 40px;
+    // width: 300px;
+    background: #fff;
+    text-align: left;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    
+    & &__close{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        color: #bbb;
+        font-size: 0;
+        width: 20px;
+        height: 20px;
+        background-size: 20px;
+        text-decoration: none;
+        background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUyIDUyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MiA1MjsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTJweCIgaGVpZ2h0PSI1MTJweCI+CjxnPgoJPHBhdGggZD0iTTI2LDBDMTEuNjY0LDAsMCwxMS42NjMsMCwyNnMxMS42NjQsMjYsMjYsMjZzMjYtMTEuNjYzLDI2LTI2UzQwLjMzNiwwLDI2LDB6IE0yNiw1MEMxMi43NjcsNTAsMiwzOS4yMzMsMiwyNiAgIFMxMi43NjcsMiwyNiwyczI0LDEwLjc2NywyNCwyNFMzOS4yMzMsNTAsMjYsNTB6IiBmaWxsPSIjMDAwMDAwIi8+Cgk8cGF0aCBkPSJNMzUuNzA3LDE2LjI5M2MtMC4zOTEtMC4zOTEtMS4wMjMtMC4zOTEtMS40MTQsMEwyNiwyNC41ODZsLTguMjkzLTguMjkzYy0wLjM5MS0wLjM5MS0xLjAyMy0wLjM5MS0xLjQxNCwwICAgcy0wLjM5MSwxLjAyMywwLDEuNDE0TDI0LjU4NiwyNmwtOC4yOTMsOC4yOTNjLTAuMzkxLDAuMzkxLTAuMzkxLDEuMDIzLDAsMS40MTRDMTYuNDg4LDM1LjkwMiwxNi43NDQsMzYsMTcsMzYgICBzMC41MTItMC4wOTgsMC43MDctMC4yOTNMMjYsMjcuNDE0bDguMjkzLDguMjkzQzM0LjQ4OCwzNS45MDIsMzQuNzQ0LDM2LDM1LDM2czAuNTEyLTAuMDk4LDAuNzA3LTAuMjkzICAgYzAuMzkxLTAuMzkxLDAuMzkxLTEuMDIzLDAtMS40MTRMMjcuNDE0LDI2bDguMjkzLTguMjkzQzM2LjA5OCwxNy4zMTYsMzYuMDk4LDE2LjY4NCwzNS43MDcsMTYuMjkzeiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=);
+        opacity: .4;
+        transition: all .3s;
+
+        &:hover{
+            opacity: 1;
         }
+    }
+
+    & &__img{
+        width: 50px;
+        height: 50px;
+        margin-right: 20px;
+    }
+
+    & &__item{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 15px;
+    }
+
+    & &__title{
+        display: block;
+        margin: 0 0 5px 0;
+        color: #2b2b2b;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0;
+        font-weight: 900;
+    }
+
+    & &__subtitle{
+        display: block;
+        margin: 0;
+        color: #2b2b2b;
+        font-size: 13px;
+        line-height: 15px;
+        letter-spacing: 0;
+        font-weight: 700;
+    }
+
+    & &__desc{
+        color: #bbb;
+        font-weight: 400;
+        font-size: 12px;
+    }
+
+    & &__remove{
+        background-color: #eee;
+        padding: 3px 15px;
+        margin-left: 30px;
+        text-decoration: none;
+        color: #333;
+        border-radius: 3px;
+        font-weight: 500;
+        font-size: 12px;
     }
 }
